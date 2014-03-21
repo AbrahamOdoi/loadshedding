@@ -1,32 +1,31 @@
 $(document).ready(function() {
-	document.addEventListener("deviceready", onDeviceReady, false);
+	// document.addEventListener("deviceready", onDeviceReady, false);
 
-	function onDeviceReady() {
-		var db = window.openDatabase("dbsched", "1.0", "db_sched", 200000);
-		db.transaction(populateDB, errorCB, successCB);
-	}
+	// function onDeviceReady() {
+	// var db = window.openDatabase("dbsched", "1.0", "db_sched", 200000);
+	// db.transaction(populateDB, errorCB, successCB);
+	// }
 
 	// Populate the database
 	//
-	function populateDB(tx) {
-		tx.executeSql('DROP TABLE IF EXISTS tbl_sched');
-		tx.executeSql('CREATE TABLE IF NOT EXISTS tbl_sched (id unique, data)');
-		tx.executeSql('INSERT INTO tbl_sched (id, data) VALUES (1, "First row")');
-		tx.executeSql('INSERT INTO tbl_sched (id, data) VALUES (2, "Second row")');
-	}
+	// function populateDB(tx) {
+	// tx.executeSql('DROP TABLE IF EXISTS tbl_sched');
+	// tx.executeSql('CREATE TABLE IF NOT EXISTS tbl_sched (id unique, data)');
+	// tx.executeSql('INSERT INTO tbl_sched (id, data) VALUES (1, "Abraham")');
+	// tx.executeSql('INSERT INTO tbl_sched (id, data) VALUES (2, "Second row")');
+	// }
 
 	// Transaction error callback
 	//
-	function errorCB(err) {
-		alert("Error processing SQL: " + err);
-	}
+	// function errorCB(err) {
+	// alert("Error processing SQL: " + err);
+	// }
 
 	// Transaction success callback
 	//
-	function successCB() {
-		alert("success!");
-	}
-
+	// function successCB() {
+	// alert("success!");
+	// }
 
 	$('#bulb').fadeOut(4000, function() {
 		$('#page').css('background', 'black');
