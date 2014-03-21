@@ -1,3 +1,18 @@
+/*<?php
+
+				$result = mysql_query("select distinct(groups),day,day_wk,hours from tbl_schedule where groups='GROUP C' AND STATUS='OFF'");
+				while ($row = mysql_fetch_assoc($result)) {
+					echo "<div class='info_disp'>
+					<span class='day_wk'>" . $row['day_wk'] . "</span>
+					<span>" . $row['day'] . "</span>
+					<span class='info_hrs'>" . $row['hours'] . "</span><br/>
+					<hr/>
+					";
+
+				}
+				echo "</div>";
+				?>*/
+				
 ::-webkit-scrollbar {
 	width: 2px;
 	height: 0px;
@@ -22,11 +37,7 @@ h3 {
 .grp_menu {
 	background: #F0F0F0;
 	font-weight: lighter;
-	font-size: smaller;
-	white-space: nowrap;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	width: 100%;
+	/*font-size:;*/
 	color: #0EBFE9;
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -34,6 +45,7 @@ h3 {
 .grp {
 	margin-right: 10px;
 	cursor: pointer;
+	font-size: small;
 }
 #grp1 {
 	border-bottom: 5px solid #0EBFE9;
@@ -41,6 +53,10 @@ h3 {
 .groups {
 	padding-bottom: 5px;
 	border-bottom: 1px solid #0EBFE9;
+	white-space: nowrap;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	width: 100%;
 }
 .day_head {
 	background: #0EBFE9;
@@ -65,4 +81,35 @@ h3 {
 	vertical-align: middle;
 	margin-left: 5px;
 	margin-right: 5px;
+}
+.info_disp{
+	width:100%;
+	text-align:center;
+	margin:10px auto;	
+	font-size: small;
+}
+
+.day_wk{
+	color:#0EBFE9;
+	float:left;
+}
+.sear_group{
+	color:#0EBFE9;
+	float:right;
+	
+}
+.info_hrs{
+	float:right;
+}
+hr{
+	border:1px solid #0EBFE9;
+	/*height: 5px;*/
+	
+}
+.icon_sea{
+	float:right;
+}
+table{
+	font-weight: lighter;
+	font-size: small;
 }
