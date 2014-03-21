@@ -1,6 +1,8 @@
-document.addEventListener("deviceready", onDeviceReady, false);
+$(document).ready(function() {
+	// document.addEventListener("deviceready", onDeviceReady, false);
+	// onDeviceReady();
 
-function onDeviceReady() {
+	// function onDeviceReady() {
 	$('#bulb').fadeOut(3000, function() {
 		$('#page').css('background', 'black');
 		$('#candle').fadeIn(4000, function() {
@@ -72,4 +74,6 @@ function onDeviceReady() {
 			"border-bottom-style" : "solid"
 		});
 	});
-}
+	// }
+
+});
