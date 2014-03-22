@@ -7,9 +7,9 @@ $(document).ready(function() {
 		});
 	});
 
-	$("#pages").on("swipe", function() {
-		alert("Swipe detected!");
-	});
+	// $("#pages").on("swipe", function() {
+		// alert("Swipe detected!");
+	// });
 
 	$(".grp").click(function() {
 		var id = $(this).attr('id');
